@@ -1,0 +1,25 @@
+#!/usr/bin/xdotool
+key --delay $1 ctrl+Page_Up
+type --delay $1 pvdi
+key --delay $1 Return
+
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 hcpi
+key --delay $1 Return
+
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 jijisa-mail
+key --delay $1 Return
+sleep 3
+type --delay $1 <my_email_password>
+key --delay $1 Return
+
+search --onlyvisible --name jijisa-mail
+windowmove 0 0
