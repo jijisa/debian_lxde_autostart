@@ -1,0 +1,29 @@
+#!/usr/bin/xdotool
+# tab name: pvdi4,harden1,durant1,myshell3
+
+sleep 3
+
+# durant1
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+sleep 1
+
+# harden1
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 harden
+key --delay $1 Return
+sleep 1
+
+# pvdi4
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+sleep 1
+
+# move to the right top - screen resolution: 1920x1080
+search --name pvdi4
+windowmove 1250 0

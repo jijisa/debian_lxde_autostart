@@ -1,0 +1,39 @@
+#!/usr/bin/xdotool
+# tab name: jijisa-mail,hcpi,pvdi1,myshell1
+
+sleep 3
+
+# pvdi1
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+sleep 1
+
+# hcpi
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+sleep 5
+type --delay $1 hcpi
+key --delay $1 Return
+sleep 5
+type --delay $1 <hcpi_ssh_password>
+key --delay $1 Return
+sleep 5
+
+# jijisa-mail
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 jijisa-mail
+key --delay $1 Return
+sleep 5
+type --delay $1 <jijisa-machine_ssh_password>
+key --delay $1 Return
+sleep 5
+type --delay $1 <jijisa_email_password>
+key --delay $1 Return
+
+search --onlyvisible --name jijisa-mail
+windowmove 0 0

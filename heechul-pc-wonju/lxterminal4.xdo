@@ -1,0 +1,36 @@
+#!/usr/bin/xdotool
+# tab name: jijisa-vdi,pvdi2,pvdi3,myshell2
+
+sleep 3
+
+# pvdi3
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+
+# pvdi2
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+
+# jijisa-vdi
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 jijisa-vdi
+key --delay $1 Return
+sleep 3
+# vnc password
+type --delay $1 <vnc_password>
+key --delay $1 Return
+sleep 3
+# windows password
+type --delay $1 <windows_password>
+key --delay $1 Return
+
+sleep 1
+
+# move to the left bottom - screen resolution: 1920x1080
+search --name qemu windowmove 500 0
+search --name "^jijisa-vdi$" windowmove 0 510
