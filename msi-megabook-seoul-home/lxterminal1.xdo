@@ -1,0 +1,64 @@
+#!/usr/bin/xdotool
+
+sleep 3
+
+# tabs: jijisa-mail,hcpi1,jijisa-testbed,jijisa-testbed,myshell1
+key --delay $1 shift+ctrl+T shift+ctrl+T shift+ctrl+T shift+ctrl+T
+sleep 1
+
+# jijisa-testbed
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+sleep 3
+type --delay $1 cicd
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+type --delay $1 jijisa-testbed
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+
+# jijisa-testbed
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+sleep 3
+type --delay $1 cicd
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+type --delay $1 jijisa-testbed
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+
+# hcpi
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 hcpi
+key --delay $1 Return
+sleep 3
+
+
+# jijisa-mail
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 jijisa-mail
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+
+getactivewindow windowmove 0 0
