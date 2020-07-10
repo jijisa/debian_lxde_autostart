@@ -4,36 +4,38 @@
 #
 
 SLEEP=200
+MYPASS="<my_password>"
+VNCPASS="<vnc_password>"
 
 sleep 10
 
 # left-top terminal
-lxterminal --tabs=jijisa-mail,hcpi1,pvdi1,myshell1 &
+lxterminal -t jijisa-mail &
 sleep 1
-$HOME/autostart/lxterminal1.xdo $SLEEP
+$HOME/autostart/lxterminal1.xdo $SLEEP $MYPASS
 
-sleep 5
+sleep 3
 
 # right-top terminal
-lxterminal --tabs=pvdi4,harden1,durant1,myshell3 &
+lxterminal &
 sleep 1
-$HOME/autostart/lxterminal2.xdo $SLEEP
+$HOME/autostart/lxterminal2.xdo $SLEEP $MYPASS
 
-sleep 5
+sleep 3
 
 # right-bottom terminal
-lxterminal --tabs=pvdi5,harden2,durant2,myshell4 &
+lxterminal &
 sleep 1
-$HOME/autostart/lxterminal3.xdo $SLEEP
+$HOME/autostart/lxterminal3.xdo $SLEEP $MYPASS
 
-sleep 5
+sleep 3
 
 # left-bottom terminal
-lxterminal --tabs=jijisa-vdi,pvdi2,pvdi3,myshell2 &
+lxterminal -t jijisa-vdi &
 sleep 1
-$HOME/autostart/lxterminal4.xdo $SLEEP
+$HOME/autostart/lxterminal4.xdo $SLEEP $MYPASS $VNCPASS
 
-sleep 5
+sleep 3
 
 # last run firefox
 firefox &

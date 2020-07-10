@@ -1,29 +1,43 @@
 #!/usr/bin/xdotool
-# tab name: pvdi5,harden2,durant2,myshell4
 
 sleep 3
 
-# durant2
+# tab name: jijisa-testbed,harden,durant,myshell
+key --delay $1 shift+ctrl+T shift+ctrl+T shift+ctrl+T 
+sleep 1
+
+# durant
 key --delay $1 ctrl+Page_Up
 sleep 1
-type --delay $1 pvdi
+type --delay $1 durant
 key --delay $1 Return
 sleep 1
 
-# harden2
+# harden
 key --delay $1 ctrl+Page_Up
 sleep 1
 type --delay $1 harden
 key --delay $1 Return
 sleep 1
 
-# pvdi5
+# jijisa-testbed
 key --delay $1 ctrl+Page_Up
 sleep 1
 type --delay $1 pvdi
 key --delay $1 Return
-sleep 1
+sleep 3
+type --delay $1 cicd
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+type --delay $1 jijisa-testbed
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
 
 # move to the right bottom - screen resolution: 1920x1080
-search --name pvdi5
-windowmove 1250 510
+getactivewindow windowmove 1250 510
