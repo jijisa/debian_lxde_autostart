@@ -1,9 +1,9 @@
 Debian LXDE autostart
 =========================
 
-This is a repo about autostarting my desktop env.
+This is a repo about autostarting my linux desktop environment using xdotool.
 
-I'm using debian buster with lxde desktop.
+I'm using lxde desktop on debian 10 (buster).
 
 How to use it
 ---------------
@@ -20,7 +20,7 @@ Edit $HOME/.config/lxsession/LXDE/autostart.::
 
 Edit auto.sh and lxterminal[1-4].xdo as you want.
 
-Now, when you start your x-window, auto.sh will run and it calls 
+Now, when x-window starts, auto.sh will run and it calls 
 xdo scripts to set up your desktop environment.
 
 
