@@ -6,36 +6,37 @@
 SLEEP=200
 MYPASS="<my_password>"
 VNCPASS="<vnc_password>"
+INTERVAL=3
 
-sleep 10
+sleep 20
 
 # left-top terminal
-lxterminal &
-sleep 5
+lxterminal -t jijisa-mail &
+sleep 1
 $HOME/autostart/lxterminal1.xdo $SLEEP $MYPASS
 
-sleep 5
+sleep $INTERVAL
 
 # right-top terminal
 lxterminal &
-sleep 5
+sleep 1
 $HOME/autostart/lxterminal2.xdo $SLEEP $MYPASS
 
-sleep 5
+sleep $INTERVAL
 
 # right-bottom terminal
 lxterminal &
-sleep 5
+sleep 1
 $HOME/autostart/lxterminal3.xdo $SLEEP $MYPASS
 
-sleep 5
+sleep $INTERVAL
 
 # left-bottom terminal
 lxterminal -t jijisa-vdi &
-sleep 5
+sleep 1
 $HOME/autostart/lxterminal4.xdo $SLEEP $MYPASS $VNCPASS
 
-sleep 5
+sleep $INTERVAL
 
 # last run firefox
 firefox &
