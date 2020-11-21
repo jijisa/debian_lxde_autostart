@@ -81,4 +81,4 @@ sleep 1
 
 # move to the left bottom - screen resolution: 1920x1080
 search --name qemu windowmove 500 0
-search --name "^jijisa-vdi$" windowmove 0 500
+search --name "^jijisa-vdi$" windowmove 0 505
