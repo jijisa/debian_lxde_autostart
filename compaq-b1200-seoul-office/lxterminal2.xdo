@@ -12,12 +12,18 @@ key --delay $1 ctrl+Page_Up
 sleep 1
 type --delay $1 durant
 key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
 sleep 1
 
 # harden
 key --delay $1 ctrl+Page_Up
 sleep 1
 type --delay $1 harden
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
 key --delay $1 Return
 sleep 1
 

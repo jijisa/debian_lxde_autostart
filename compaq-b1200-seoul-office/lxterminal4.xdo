@@ -67,17 +67,17 @@ sleep 3
 # jijisa-vdi
 sleep 1
 key --delay $1 ctrl+Page_Up
-sleep 1
-type --delay $1 jijisa-vdi
-key --delay $1 Return
-sleep 3
-# vnc password
-type --delay $1 $3
-key --delay $1 Return
-sleep 3
-# windows password
-type --delay $1 $2
-key --delay $1 Return
+#sleep 1
+#type --delay $1 jijisa-vdi
+#key --delay $1 Return
+#sleep 3
+## vnc password
+#type --delay $1 $3
+#key --delay $1 Return
+#sleep 3
+## windows password
+#type --delay $1 $2
+#key --delay $1 Return
 
 sleep 1
 

@@ -28,7 +28,7 @@ sleep 5
 
 # youtube-viewer
 key --delay $1 ctrl+Page_Up
-sleep 1
+sleep 3
 type --delay $1 "youtube-viewer --player=vlc -n -I --std-input=1.. cafe music"
 key --delay $1 Return
 sleep 5
