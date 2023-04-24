@@ -1,0 +1,68 @@
+#!/usr/bin/xdotool
+
+sleep 3
+
+# tab name: jijisa-testbed,jijisa-testbed,harden,durant,myshell
+key --delay $1 shift+ctrl+T shift+ctrl+T shift+ctrl+T shift+ctrl+T
+sleep 1
+
+# durant
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 durant
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 1
+
+# harden
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 harden
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 1
+
+# jijisa-testbed
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+sleep 3
+type --delay $1 cicd
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+type --delay $1 jijisa-testbed
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+
+# jijisa-testbed
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 pvdi
+key --delay $1 Return
+sleep 3
+type --delay $1 cicd
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+type --delay $1 jijisa-testbed
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+
+# move to the right bottom - screen resolution: 1920x1080
+getactivewindow windowmove 1090 505
