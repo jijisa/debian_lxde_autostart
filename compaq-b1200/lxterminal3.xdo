@@ -33,6 +33,9 @@ sleep 1
 type --delay $1 pvdi
 key --delay $1 Return
 sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
 type --delay $1 cicd
 key --delay $1 Return
 sleep 3
@@ -52,6 +55,9 @@ sleep 1
 type --delay $1 pvdi
 key --delay $1 Return
 sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
 type --delay $1 cicd
 key --delay $1 Return
 sleep 3
@@ -65,5 +71,5 @@ type --delay $1 $2
 key --delay $1 Return
 sleep 3
 
-# move to the right top - screen resolution: 1920x1080
-getactivewindow windowmove 1100 0
+# move to the right top - screen resolution: 1280x800
+getactivewindow windowmove 480 233

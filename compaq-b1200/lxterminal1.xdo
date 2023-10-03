@@ -13,6 +13,9 @@ sleep 1
 type --delay $1 pvdi
 key --delay $1 Return
 sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
 type --delay $1 cicd
 key --delay $1 Return
 sleep 3
@@ -29,20 +32,14 @@ sleep 5
 # youtube-viewer
 key --delay $1 ctrl+Page_Up
 sleep 3
-type --delay $1 "youtube-viewer --player=vlc -n -I --std-input=1.. cafe music"
+#type --delay $1 "youtube-viewer --player=vlc -n -I --std-input=1.. cafe music"
 key --delay $1 Return
 sleep 5
 
 # hcpi
 key --delay $1 ctrl+Page_Up
 sleep 1
-type --delay $1 pvdi
-key --delay $1 Return
-sleep 5
-type --delay $1 hcpi
-key --delay $1 Return
-sleep 5
-type --delay $1 $2
+type --delay $1 "cd hcpi/blog/internal/docs"
 key --delay $1 Return
 sleep 5
 
@@ -51,6 +48,10 @@ key --delay $1 ctrl+Page_Up
 sleep 1
 type --delay $1 jijisa-mail
 key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
 sleep 5
 type --delay $1 $2
 key --delay $1 Return

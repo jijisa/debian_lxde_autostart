@@ -4,11 +4,10 @@
 #
 
 SLEEP=200
-MYPASS="<my_password>"
-VNCPASS="<vnc_password>"
+MYPASS="<my password>"
 INTERVAL=3
 
-sleep 20
+sleep 30
 
 # left-top terminal
 lxterminal -t jijisa-mail &
@@ -32,9 +31,9 @@ $HOME/autostart/lxterminal3.xdo $SLEEP $MYPASS
 sleep $INTERVAL
 
 # left-bottom terminal
-lxterminal -t jijisa-vdi &
+lxterminal &
 sleep 1
-$HOME/autostart/lxterminal4.xdo $SLEEP $MYPASS $VNCPASS
+$HOME/autostart/lxterminal4.xdo $SLEEP $MYPASS
 
 sleep $INTERVAL
 
