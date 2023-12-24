@@ -71,4 +71,4 @@ key --delay $1 Return
 sleep 3
 
 # move to the right bottom - screen resolution: 1920x1080
-getactivewindow windowmove 1000 400
+getactivewindow windowmove 1002 383
