@@ -2,8 +2,34 @@
 
 sleep 3
 
-# tab name: jijisa-vdi,jijisa-testbed,jijisa-testbed,jijisa-testbed,myshell
+# tab name: durant,durant,durant,jijisa-testbed,myshell
 key --delay $1 shift+ctrl+T shift+ctrl+T shift+ctrl+T shift+ctrl+T
+sleep 1
+
+# jijisa-testbed
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 durant
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 1
+type --delay $1 jijisa-testbed
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+
+# durant
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 durant
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
 sleep 1
 
 # durant
@@ -16,66 +42,15 @@ type --delay $1 $2
 key --delay $1 Return
 sleep 1
 
-# jijisa-testbed
+# durant
 key --delay $1 ctrl+Page_Up
 sleep 1
-type --delay $1 pvdi
-key --delay $1 Return
-sleep 3
-type --delay $1 cicd
+type --delay $1 durant
 key --delay $1 Return
 sleep 3
 type --delay $1 $2
 key --delay $1 Return
-sleep 3
-type --delay $1 jijisa-testbed
-key --delay $1 Return
-sleep 3
-type --delay $1 $2
-key --delay $1 Return
-sleep 3
-
-# jijisa-testbed
-key --delay $1 ctrl+Page_Up
 sleep 1
-type --delay $1 pvdi
-key --delay $1 Return
-sleep 3
-type --delay $1 cicd
-key --delay $1 Return
-sleep 3
-type --delay $1 $2
-key --delay $1 Return
-sleep 3
-type --delay $1 jijisa-testbed
-key --delay $1 Return
-sleep 3
-type --delay $1 $2
-key --delay $1 Return
-sleep 3
-
-# jijisa-testbed
-key --delay $1 ctrl+Page_Up
-sleep 1
-type --delay $1 pvdi
-key --delay $1 Return
-sleep 3
-type --delay $1 cicd
-key --delay $1 Return
-sleep 3
-type --delay $1 $2
-key --delay $1 Return
-sleep 3
-type --delay $1 jijisa-testbed
-key --delay $1 Return
-sleep 3
-type --delay $1 $2
-key --delay $1 Return
-#sleep 3
-
-#sleep 1
 
 # move to the left bottom - screen resolution: 1920x1080
-#search --name qemu windowmove 500 0
-#search --name "^jijisa-vdi$" windowmove 0 505
-getactivewindow windowmove 0 505
+getactivewindow windowmove 0 410

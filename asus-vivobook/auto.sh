@@ -2,7 +2,6 @@
 #
 # This script is run by $HOME/.config/lxsession/LXDE/autostart.
 #
-
 # check internet connectivity.
 ping -c1 -q -W 3 google.com. > /dev/null 2>&1
 if [ $? -ne 0 ]; then
@@ -11,14 +10,13 @@ if [ $? -ne 0 ]; then
 fi
 
 SLEEP=200
-MYPASS="<password>"
-
-sleep 10
+VPNPASS='<VPNPASSWORD>'
+MYPASS='<MYPASSWORD>'
 
 # left-top terminal
 lxterminal -t jijisa-mail &
 sleep 1
-$HOME/autostart/lxterminal1.xdo $SLEEP $MYPASS
+$HOME/autostart/lxterminal1.xdo $SLEEP $MYPASS $VPNPASS
 
 sleep 3
 
@@ -37,12 +35,11 @@ $HOME/autostart/lxterminal3.xdo $SLEEP $MYPASS
 sleep 3
 
 # left-bottom terminal
-#lxterminal -t jijisa-vdi &
 lxterminal &
 sleep 1
 $HOME/autostart/lxterminal4.xdo $SLEEP $MYPASS
 
 sleep 3
 
-# last run firefox
+# run firefox
 firefox &
