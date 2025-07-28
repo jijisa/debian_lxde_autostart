@@ -2,22 +2,24 @@
 
 sleep 3
 
-# tab name: durant,durant,durant,harden,myshell
+# tab name: durant,durant,durant,durant,myshell
 key --delay $1 shift+ctrl+T shift+ctrl+T shift+ctrl+T shift+ctrl+T
 sleep 1
 
-# myshell (tunnel2sia)
-type --delay $1 tunnel2sia
-key --delay $1 Return
-sleep 5
-type --delay $1 $3
-key --delay $1 Return
-sleep 3
-
-# harden
+# durant 
 key --delay $1 ctrl+Page_Up
 sleep 1
-type --delay $1 harden
+type --delay $1 durant
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 1
+
+# durant
+key --delay $1 ctrl+Page_Up
+sleep 1
+type --delay $1 durant
 key --delay $1 Return
 sleep 3
 type --delay $1 $2
@@ -42,17 +44,7 @@ key --delay $1 Return
 sleep 3
 type --delay $1 $2
 key --delay $1 Return
-sleep 3
-
-# durant
-key --delay $1 ctrl+Page_Up
 sleep 1
-type --delay $1 durant
-key --delay $1 Return
-sleep 3
-type --delay $1 $2
-key --delay $1 Return
-sleep 3
 
-# move to the right top - screen resolution: 1920x1080
-getactivewindow windowmove 1095 0
+# move to the left bottom - screen resolution: 1920x1080
+getactivewindow windowmove 0 410

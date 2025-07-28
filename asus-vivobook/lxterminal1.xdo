@@ -5,6 +5,14 @@ sleep 5
 # tab name: jijisa-mail,hcpi,durant,jijisa-testbed,myshell
 key --delay $1 shift+ctrl+T shift+ctrl+T shift+ctrl+T shift+ctrl+T
 
+# myshell (tunnel2durant)
+type --delay $1 tunnel2durant
+key --delay $1 Return
+sleep 5
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+
 # durant -> jijisa-testbed
 key --delay $1 ctrl+Page_Up
 sleep 1
