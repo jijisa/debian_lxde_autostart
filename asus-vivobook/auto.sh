@@ -2,6 +2,27 @@
 #
 # This script is run by $HOME/.config/lxsession/LXDE/autostart.
 #
+## Variables
+SLEEP=200
+MYPASS='<MyPASS>'
+# orchard pass
+ORCHARDPASS='<ORCHARDPASS>'
+VPNPASS='<VPNPASS>'
+
+# continue or abort?
+sleep 10
+lxterminal &
+sleep 1
+xdotool type --delay $SLEEP $HOME/autostart/ask.sh
+xdotool key --delay $SLEEP Return
+sleep 12
+xdotool type --delay $SLEEP exit
+xdotool key --delay $SLEEP Return
+CORA=$(cat $HOME/cora)
+if [[ "x$CORA" != "xcontinue" ]]; then
+  logger -p syslog.info "Abort to execute autostart."
+  exit 1
+fi
 # check internet connectivity.
 ping -c1 -q -W 3 google.com. > /dev/null 2>&1
 if [ $? -ne 0 ]; then
@@ -19,18 +40,11 @@ else
     logger -p syslog.info "VPN connection is allowed today."
 fi
 
-## Let's start!!!
-SLEEP=200
-MYPASS="<MYPASS>"
-# orchard pass
-ORCHARDPASS='<ORCHARDPASS>'
-VPNPASS='<VPNPASS>'
-
 # mocp play
 mocp -S
+mocp -v 75
 mocp -o shuffle,autonext
-mocp -v 70
-mocp -p
+#mocp -p
 
 # left-top terminal
 lxterminal -t jijisa-mail &
