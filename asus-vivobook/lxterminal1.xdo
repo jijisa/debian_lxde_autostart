@@ -2,7 +2,7 @@
 
 sleep 5
 
-# tab name: jijisa-mail,hcpi,durant,jijisa-testbed,myshell
+# tab name: jijisa-mail,hcpi,jijisa-testbed,jijisa-testbed,myshell
 key --delay $1 shift+ctrl+T shift+ctrl+T shift+ctrl+T shift+ctrl+T
 
 # myshell (tunnel2durant)
@@ -13,7 +13,7 @@ type --delay $1 $2
 key --delay $1 Return
 sleep 3
 
-# durant -> jijisa-testbed
+# durant -> vpn -> jijisa-testbed
 key --delay $1 ctrl+Page_Up
 sleep 1
 type --delay $1 durant
@@ -49,10 +49,17 @@ type --delay $1 $2
 key --delay $1 Return
 sleep 3
 
-# durant
+# durant -> jijisa-testbed
 key --delay $1 ctrl+Page_Up
 sleep 1
 type --delay $1 durant
+key --delay $1 Return
+sleep 3
+type --delay $1 $2
+key --delay $1 Return
+sleep 3
+# jijisa-testbed
+type --delay $1 jijisa-testbed
 key --delay $1 Return
 sleep 3
 type --delay $1 $2
